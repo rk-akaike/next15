@@ -28,7 +28,6 @@ export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
       skills: formData.get("skills") as string,
       comments: formData.get("comments") as string,
       discussion_date: formData.get("discussion_date") as string,
-      rating: formData.get("rating") as string,
     };
 
     try {
@@ -174,26 +173,6 @@ export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
               rows={3}
               className="mt-1 block w-full p-2 border rounded-md"
             ></textarea>
-          </div>
-          <div>
-            <label
-              htmlFor="rating"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Rating
-            </label>
-            <select
-              id="rating"
-              name="rating"
-              className="mt-1 block w-full p-2 border rounded-md"
-              required
-            >
-              <option value="Unsatisfactory">Unsatisfactory</option>
-              <option value="Needs Development">Needs Development</option>
-              <option value="Meets Expectations">Meets Expectations</option>
-              <option value="Exceeds Expectations">Exceeds Expectations</option>
-              <option value="Outstanding">Outstanding</option>
-            </select>
           </div>
 
           {error && <p className="text-red-500 text-sm">{error}</p>}

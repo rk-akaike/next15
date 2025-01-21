@@ -9,5 +9,5 @@ export interface Review {
   comments: string;
   assessee?: string;
   assessor?: string;
-  rating: string;
+  rating?: string;
 }
