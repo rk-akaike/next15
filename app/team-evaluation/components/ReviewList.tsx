@@ -6,7 +6,6 @@ export default function ReviewList({
   currentPage,
   loading,
   hasMore,
-  error,
   setSelectedEmployee,
   selectedEmployee,
   isLoadingEmployees,

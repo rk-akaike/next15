@@ -1,16 +1,12 @@
 "use client";
 
+import { Review } from "@/types/review";
 import { fetchAccessToken } from "@/utils/auth";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-interface User {
-  id: number;
-  name: string;
-}
-
 interface TeamEvaluationFormProps {
-  setReviews: React.Dispatch<React.SetStateAction<any[]>>;
+  setReviews: React.Dispatch<React.SetStateAction<Review[]>>;
   onClose: () => void;
   employees: string[];
   selectedEmployee: string;
@@ -20,7 +16,6 @@ export default function TeamEvaluationForm({
   setReviews,
   onClose,
   employees,
-  selectedEmployee,
 }: TeamEvaluationFormProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -52,8 +47,7 @@ export default function TeamEvaluationForm({
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            // Authorization: `Bearer ${token}`,
-            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2FrYWlrZS5haS9lbWFpbCI6ImthcnRoaWtAYWthaWtldGVjaC5jb20iLCJodHRwczovL2FrYWlrZS5haS9lbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaHR0cHM6Ly9ha2Fpa2UuYWkvZmFtaWx5X25hbWUiOiJSYW1ha3Jpc2huYSIsImh0dHBzOi8vYWthaWtlLmFpL3VzZXJfaWQiOiJnb29nbGUtb2F1dGgyfDExNzA1MjY1OTg3NTYzNjI2MjAzNiIsImh0dHBzOi8vYWthaWtlLmFpL3VzZXJfbWV0YWRhdGEiOnt9LCJodHRwczovL2FrYWlrZS5haS9naXZlbl9uYW1lIjoiVGFuaWtvbmRhIiwiaHR0cHM6Ly9ha2Fpa2UuYWkvc3RhdGUiOiJleUp5WlhSMWNtNVVieUk2SW1oMGRIQTZMeTlzYjJOaGJHaHZjM1E2TXpBd01DOGlmUSIsImlzcyI6Imh0dHBzOi8vcGRmY2hhdC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTcwNTI2NTk4NzU2MzYyNjIwMzYiLCJhdWQiOlsiaHR0cHM6Ly9wZGZjaGF0LnVzLmF1dGgwLmNvbS9hcGkvdjIvIiwiaHR0cHM6Ly9wZGZjaGF0LnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE3MzczNTQxODEsImV4cCI6MTczNzQ0MDU4MSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsImF6cCI6Im5oRTJxYm5kcHpsT24yMFlEV2xPTGZGejVkR3E3cW4yIn0.dCJRousRGaReHYLxNeUMoSikfGY5nmoaXaZgRun0pFb5pMjeir4NuYlLROcjTEDQGWNVfc08Q-kIQbnxEq3NS3slsygkk_fRz7gifu1pFFopOtd8AC1Tkou2ystnzNNRf_0v36JF75Dg8V1xJDqXDXhmiQMeY3Pgv6M1B95g5xQkD_pZU6aLSAgw8OY5r8rLYQe7IPJAKkmfztXBmbgU-w9EOggYrahvwkzLFfTOSx0DXXYoXywcuBlnoOkt8IhMgTwU2Hf934_cyGFuC4KyEuTaXhw_Di8ZVci-X_JkAMP1ZRDjB-l6r6gV7pmrlaeaowXE7Qv4cYJ-aLRlNf6ZmQ`,
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify(evaluation),
         }
@@ -67,10 +61,12 @@ export default function TeamEvaluationForm({
         position: "top-right",
         autoClose: 4000,
       });
-      setReviews((prev: any) => [...prev, evaluation]);
+      setReviews((prev) => [...prev, evaluation]);
       onClose();
-    } catch (err: any) {
-      setError(err.message || "An unexpected error occurred.");
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "An unexpected error occurred.";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
