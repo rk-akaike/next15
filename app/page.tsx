@@ -9,6 +9,10 @@ function ProfileClient() {
   console.log("🚀 ~ ProfileClient ~ obj:", obj);
   const { user, error, isLoading } = obj;
 
+  const handleLogout = () => {
+    window.location.href = "/api/auth/logout";
+  };
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
@@ -24,7 +28,8 @@ function ProfileClient() {
         <h2>{user.name}</h2>
         <p>{user.email}</p>
         {user.name ? (
-          <Link href="/api/auth/logout">Logout</Link>
+          // <Link href="/api/auth/logout">Logout</Link>
+          <button onClick={handleLogout}>logout</button>
         ) : (
           <Link href="/api/auth/login">Login</Link>
         )}
