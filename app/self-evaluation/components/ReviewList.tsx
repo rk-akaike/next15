@@ -17,6 +17,7 @@ export default function ReviewList({
   const [error, setError] = useState<string | null>(null);
   const [hasMore, setHasMore] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalReviews, setTotalReviews] = useState<number | null>(null); // Total reviews from API response
 
   const loadMoreReviews = async (page: number) => {
     if (loading || !hasMore) return; // Prevent duplicate calls
@@ -26,9 +27,7 @@ export default function ReviewList({
     try {
       const token = await fetchAccessToken();
       const response = await fetch(
-        `${
-          process.env.NEXT_PUBLIC_BASE_URL
-        }/api/feedback?page=${page}&limit=${REVIEWS_PER_PAGE}&offset=${4}`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?page=${page}&limit=${REVIEWS_PER_PAGE}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -42,14 +41,22 @@ export default function ReviewList({
       }
 
       const data = await response.json();
-      const newReviews = data.results;
+      const { results: newReviews, count } = data; // Extract results and count from the response
 
-      if (newReviews.length === reviews.length) {
+      // Update total reviews only once, when fetched for the first time
+      if (totalReviews === null && count !== undefined) {
+        setTotalReviews(count);
+      }
+
+      // Check if there are more reviews to load
+      if (page * REVIEWS_PER_PAGE >= count) {
         setHasMore(false); // No more data to fetch
       } else {
-        setReviews((prev) => [...prev, ...newReviews]);
-        setCurrentPage(page + 1); // Update the current page only after a successful fetch
+        setHasMore(true);
       }
+
+      setReviews((prev) => [...prev, ...newReviews]);
+      setCurrentPage(page); // Update the current page
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : "An unexpected error occurred.";
@@ -60,11 +67,13 @@ export default function ReviewList({
   };
 
   useEffect(() => {
-    loadMoreReviews(1);
+    loadMoreReviews(1); // Initial fetch
   }, []);
+
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
 
+    // Trigger load more when near the bottom
     if (scrollTop + clientHeight >= scrollHeight - 10 && hasMore && !loading) {
       loadMoreReviews(currentPage + 1); // Load the next page
     }
@@ -116,10 +125,6 @@ export default function ReviewList({
             <div>
               <h5 className="text-sm font-semibold text-gray-600">Comments</h5>
               <p className="text-sm text-gray-800">{review.comments}</p>
-            </div>
-            <div>
-              <h5 className="text-sm font-semibold text-gray-600">Rating</h5>
-              <p className="text-sm text-gray-800">{review.rating}</p>
             </div>
           </div>
         </div>
