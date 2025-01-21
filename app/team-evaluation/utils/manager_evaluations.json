@@ -1,0 +1,1202 @@
+[
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-10",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-05",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-02",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-02",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-02",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-03",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-02",
+        "employeeEvaluated": "Liam Harris",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-05",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-03",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-05",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "Sophia White",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-05",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-10",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-10",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Liam Harris",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-06",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-06",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-03",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Sophia White",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-03",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-09",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "Liam Harris",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-06",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Sophia White",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Liam Harris",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-06",
+        "employeeEvaluated": "John Doe",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Sophia White",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-10",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-06",
+        "employeeEvaluated": "Liam Harris",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Liam Harris",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-04",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-09",
+        "employeeEvaluated": "Sophia White",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-09",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Encourage cross-functional collaboration and technical upskilling."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-03",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-12",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Ava Thompson",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Chris Evans",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 2,
+        "managerName": "Bob Smith",
+        "dateOfEvaluation": "2025-01-01",
+        "employeeEvaluated": "Jane Smith",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Struggles with conflict resolution during team discussions.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-11",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-10",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Achieved 98% customer satisfaction rating for Q4.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Complete certification in advanced data analytics.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-03",
+        "employeeEvaluated": "Olivia Martin",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Sophia White",
+        "evaluation": {
+            "achievements": "Exceeded quarterly sales target by 15%.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Work on proactive thinking and process optimization."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-07",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Attend leadership training to enhance decision-making skills.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    },
+    {
+        "managerId": 5,
+        "managerName": "Evelyn Clark",
+        "dateOfEvaluation": "2025-01-15",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Implemented a new quality assurance framework.",
+            "challenges": "Delays in delivering reports due to lack of prioritization.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 4,
+        "managerName": "David Lee",
+        "dateOfEvaluation": "2025-01-14",
+        "employeeEvaluated": "Noah Wilson",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Needs to improve time management to meet deadlines consistently.",
+            "goals": "Improve delegation and time management practices.",
+            "skills": "Enhance analytical thinking and problem-solving skills."
+        }
+    },
+    {
+        "managerId": 3,
+        "managerName": "Clara Davis",
+        "dateOfEvaluation": "2025-01-08",
+        "employeeEvaluated": "Mike Taylor",
+        "evaluation": {
+            "achievements": "Successfully led a team to complete the project ahead of schedule.",
+            "challenges": "Occasional difficulties in delegating tasks effectively.",
+            "goals": "Develop a comprehensive strategy for onboarding new clients.",
+            "skills": "Focus on effective communication and team-building activities."
+        }
+    },
+    {
+        "managerId": 1,
+        "managerName": "Alice Johnson",
+        "dateOfEvaluation": "2025-01-13",
+        "employeeEvaluated": "Emma Brown",
+        "evaluation": {
+            "achievements": "Streamlined the documentation process, saving 20 hours weekly.",
+            "challenges": "Finds it challenging to adapt to unexpected changes.",
+            "goals": "Enhance adaptability through structured problem-solving workshops.",
+            "skills": "Focus on building leadership and mentorship skills."
+        }
+    }
+]
