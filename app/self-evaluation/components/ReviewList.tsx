@@ -50,8 +50,10 @@ export default function ReviewList({
         setReviews((prev) => [...prev, ...newReviews]);
         setCurrentPage(page + 1); // Update the current page only after a successful fetch
       }
-    } catch (err: any) {
-      setError(err.message || "An unexpected error occurred.");
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "An unexpected error occurred.";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }

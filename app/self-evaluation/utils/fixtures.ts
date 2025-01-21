@@ -1,6 +1,7 @@
-export const fetchDummyReviews = async () => {
+export const fetchDummyReviews = async (): Promise<
+  { id: number; title: string; content: string }[]
+> => {
   try {
-    // Fetch data from a public API (JSONPlaceholder) with a query parameter for English language
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/posts?_lang=en"
     );
@@ -11,21 +12,20 @@ export const fetchDummyReviews = async () => {
 
     const data = await response.json();
 
-    // Transform the data to match your application format
-    const reviews = data.slice(0, 100).map((item: any) => ({
-      id: item.id,
-      title: item.title,
-      content: item.body,
-    }));
-
-    return reviews;
+    return data
+      .slice(0, 100)
+      .map((item: { id: number; title: string; body: string }) => ({
+        id: item.id,
+        title: item.title,
+        content: item.body,
+      }));
   } catch (error) {
     console.error(error);
     return [];
   }
 };
 
-export async function fetchDummyData(url: string) {
+export async function fetchDummyData<T>(url: string): Promise<T> {
   const response = await fetch(url);
 
   if (!response.ok) {

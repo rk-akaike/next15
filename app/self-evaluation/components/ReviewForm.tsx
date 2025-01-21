@@ -1,12 +1,13 @@
 "use client";
 
+import { Review } from "@/types/review";
 import { fetchAccessToken } from "@/utils/auth";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { toast } from "react-toastify";
 
 interface ReviewFormProps {
   onClose: () => void;
-  setReviews: (reviews: any) => void;
+  setReviews: Dispatch<SetStateAction<Review[]>>;
 }
 
 export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
@@ -52,10 +53,12 @@ export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
         position: "top-right",
         autoClose: 4000,
       });
-      setReviews((prev: any) => [...prev, evaluation]);
+      setReviews((prev) => [...prev, evaluation]);
       onClose();
-    } catch (err: any) {
-      setError(err.message || "An unexpected error occurred.");
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "An unexpected error occurred.";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
