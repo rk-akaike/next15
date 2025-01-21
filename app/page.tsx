@@ -2,6 +2,7 @@
 
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
+import Link from "next/link";
 
 function ProfileClient() {
   const { user, error, isLoading } = useUser();
@@ -21,9 +22,9 @@ function ProfileClient() {
         <h2>{user.name}</h2>
         <p>{user.email}</p>
         {user.name ? (
-          <a href="/api/auth/logout">Logout</a>
+          <Link href="/api/auth/logout">Logout</Link>
         ) : (
-          <a href="/api/auth/login">Login</a>
+          <Link href="/api/auth/login">Login</Link>
         )}
       </div>
     )
