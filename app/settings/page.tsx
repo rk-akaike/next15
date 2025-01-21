@@ -1,4 +1,4 @@
-import { withPageAuthRequired, getSession } from "@auth0/nextjs-auth0";
+import { getSession } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 
 const SettingsPage = async () => {
@@ -26,9 +26,9 @@ const SettingsPage = async () => {
             <Image
               src={user.picture}
               alt="User profile"
-              width={16}
-              height={16}
-              className="w-16 h-16 rounded-full mt-2"
+              width={64}
+              height={64}
+              className="rounded-full mt-2"
             />
           </p>
           <p>
@@ -42,4 +42,4 @@ const SettingsPage = async () => {
   );
 };
 
-export default withPageAuthRequired(SettingsPage);
+export default SettingsPage;
