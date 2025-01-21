@@ -8,62 +8,15 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import { fetchAccessToken } from "@/utils/auth";
 import { Review } from "@/types/review";
 
-const REVIEWS_PER_PAGE = 4;
-
 const ManagerEvaluation = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [reviews, setReviews] = useState<Review[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [employees, setEmployees] = useState<string[]>([]);
-  const [isLoadingEmployees, setIsLoadingEmployees] = useState<boolean>(true);
   const [selectedEmployee, setSelectedEmployee] = useState<string>("");
+  const [isLoadingEmployees, setIsLoadingEmployees] = useState<boolean>(true);
+  const [employees, setEmployees] = useState<string[]>([]);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
-  const loadMoreReviews = async (page: number) => {
-    // if (!loading || !hasMore) return; // Prevent duplicate calls
-    setLoading(true);
-    setError(null);
-
-    try {
-      const token = await fetchAccessToken();
-      const response = await fetch(
-        `${
-          process.env.NEXT_PUBLIC_BASE_URL
-        }/api/feedback?page=${page}&limit=${REVIEWS_PER_PAGE}&offset=${4}&reportee_email=${selectedEmployee}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch reviews.");
-      }
-
-      const data = await response.json();
-      const newReviews = data.results;
-
-      if (newReviews.length === reviews.length) {
-        setHasMore(false); // No more data to fetch
-      } else {
-        setReviews(newReviews);
-        setCurrentPage(page + 1); // Update the current page only after a successful fetch
-      }
-    } catch (err) {
-      const errorMessage =
-        err instanceof Error ? err.message : "An unexpected error occurred.";
-      setError(errorMessage);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const getEmployees = async () => {
     setIsLoadingEmployees(true);
@@ -85,7 +38,9 @@ const ManagerEvaluation = () => {
 
       const data = await response.json();
       setEmployees(data.reportees);
-      setSelectedEmployee(data.reportees[0]);
+      if (data.reportees.length > 0) {
+        setSelectedEmployee(data.reportees[0]);
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -95,7 +50,6 @@ const ManagerEvaluation = () => {
 
   const getEmployeeAndReviews = async () => {
     if (employees.length === 0) await getEmployees();
-    await loadMoreReviews(1);
   };
 
   useEffect(() => {
@@ -133,12 +87,8 @@ const ManagerEvaluation = () => {
           </button>
         </div>
         <ReviewList
-          loadMoreReviews={loadMoreReviews}
           reviews={reviews}
-          currentPage={currentPage}
-          loading={loading}
-          hasMore={hasMore}
-          error={error}
+          setReviews={setReviews}
           setSelectedEmployee={setSelectedEmployee}
           selectedEmployee={selectedEmployee}
           isLoadingEmployees={isLoadingEmployees}

@@ -1,44 +1,106 @@
+"use client";
+
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Review } from "@/types/review";
+import { fetchAccessToken } from "@/utils/auth";
+
+const REVIEWS_PER_PAGE = 4;
 
 export default function ReviewList({
-  loadMoreReviews,
   reviews,
-  currentPage,
-  loading,
-  hasMore,
+  setReviews,
   setSelectedEmployee,
   selectedEmployee,
   isLoadingEmployees,
   employees,
 }: {
-  loadMoreReviews: (page: number) => void;
   reviews: Review[];
-  currentPage: number;
-  loading: boolean;
-  hasMore: boolean;
-  error: string | null;
-  setSelectedEmployee: React.Dispatch<React.SetStateAction<string>>;
+  setReviews: Dispatch<SetStateAction<Review[]>>;
+  setSelectedEmployee: Dispatch<SetStateAction<string>>;
   selectedEmployee: string;
   isLoadingEmployees: boolean;
   employees: string[];
 }) {
+  const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selected = e.target.value; // Get the selected dropdown value
+
+    setSelectedEmployee(selected); // Update the state for future use
+    setHasMore(true); // Reset pagination
+    setCurrentPage(1); // Reset page count
+
+    // Pass the selected value directly to loadMoreReviews
+    loadMoreReviews(1, true, selected);
+  };
+
+  const loadMoreReviews = async (
+    page: number,
+    reset = false,
+    employeeEmail: string = selectedEmployee // Default to the current state
+  ) => {
+    if (loading || (!hasMore && !reset)) return; // Prevent duplicate calls
+    setLoading(true);
+    setError(null);
+
+    try {
+      const token = await fetchAccessToken();
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?page=${page}&limit=${REVIEWS_PER_PAGE}&reportee_email=${employeeEmail}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch reviews.");
+      }
+
+      const data = await response.json();
+      const { results: newReviews, count } = data;
+
+      if (reset) {
+        setReviews(newReviews); // Reset reviews on dropdown change
+      } else {
+        setReviews((prev) => [...prev, ...newReviews]); // Append new reviews
+      }
+
+      setHasMore(page * REVIEWS_PER_PAGE < count); // Determine if more reviews can be loaded
+      setCurrentPage(page); // Update the current page
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "An unexpected error occurred.";
+      setError(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+  };
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
 
     if (scrollTop + clientHeight >= scrollHeight - 10 && hasMore && !loading) {
-      loadMoreReviews(currentPage + 1);
+      loadMoreReviews(currentPage + 1); // Load the next page
     }
   };
 
-  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selected = e.target.value;
-    setSelectedEmployee(selected);
-  };
+  useEffect(() => {
+    if (selectedEmployee) {
+      loadMoreReviews(1, true); // Initial fetch or on employee change
+    }
+  }, [selectedEmployee]);
 
   if (isLoadingEmployees) {
     return (
       <div className="flex items-center justify-center">
-        <p className="text-lg font-semibold text-gray-600">Loading...</p>
+        <p className="text-lg font-semibold text-gray-600">
+          Loading employees...
+        </p>
       </div>
     );
   }
@@ -82,7 +144,7 @@ export default function ReviewList({
       </div>
 
       <div
-        className="  "
+        className="bg-white rounded-lg shadow-md p-4"
         style={{ maxHeight: "700px", overflowY: "auto" }}
         onScroll={handleScroll}
       >
@@ -119,12 +181,6 @@ export default function ReviewList({
                 <p className="text-sm text-gray-800">{review.skills}</p>
               </div>
               <div>
-                <h5 className="text-sm font-semibold text-gray-600">
-                  Comments
-                </h5>
-                <p className="text-sm text-gray-800">{review.comments}</p>
-              </div>
-              <div>
                 <h5 className="text-sm font-semibold text-gray-600">Rating</h5>
                 <p className="text-sm text-gray-800">{review.rating}</p>
               </div>
@@ -137,7 +193,12 @@ export default function ReviewList({
             <p className="text-sm text-gray-600 mt-2">Loading...</p>
           </div>
         )}
-        {!hasMore && reviews.length === 0 && (
+        {!hasMore && !loading && reviews.length > 0 && (
+          <p className="text-sm text-gray-600 mt-2 text-center">
+            No more reviews to load.
+          </p>
+        )}
+        {reviews.length === 0 && !loading && !error && (
           <p className="text-sm text-gray-600 mt-2 text-center">
             No reviews available.
           </p>
