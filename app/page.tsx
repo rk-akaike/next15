@@ -1,6 +1,7 @@
 "use client";
 
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0/client";
+import Image from "next/image";
 
 function ProfileClient() {
   const { user, error, isLoading } = useUser();
@@ -11,7 +12,12 @@ function ProfileClient() {
   return (
     user && (
       <div>
-        <img src={user.picture} alt={user.name} />
+        <Image
+          src={user.picture ?? ""}
+          alt={user.name ?? "User Picture"}
+          width={200}
+          height={200}
+        />
         <h2>{user.name}</h2>
         <p>{user.email}</p>
         {user.name ? (
