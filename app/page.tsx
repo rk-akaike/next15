@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 function ProfileClient() {
-  const { user, error, isLoading } = useUser();
+  const obj = useUser();
+  console.log("🚀 ~ ProfileClient ~ obj:", obj);
+  const { user, error, isLoading } = obj;
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
