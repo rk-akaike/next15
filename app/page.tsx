@@ -25,7 +25,7 @@ const Dashboard = () => {
               Team Evaluation
             </h3>
             <p className="text-gray-600 mt-2 text-sm">
-              Review your team's performance.
+              Review your team&apos;s performance.
             </p>
             <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm">
               <Link href="/team-evaluation">Go to Team Evaluation</Link>
