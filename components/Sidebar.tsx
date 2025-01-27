@@ -1,8 +1,10 @@
 "use client";
+import dynamic from "next/dynamic";
 import { HiUserCircle, HiClipboardList, HiCog } from "react-icons/hi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+
+const Image = dynamic(() => import("next/image"), { ssr: false });
 
 export default function Sidebar() {
   const pathname = usePathname();
