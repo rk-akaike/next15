@@ -12,7 +12,9 @@ export default function Sidebar() {
   return (
     <div className="w-60 h-screen bg-white border-r border-gray-200 shadow-sm">
       <div className="flex items-center justify-center py-6">
-        <Image src="/akaike-logo.svg" alt="Logo" width={150} height={150} />
+        <Link href="/">
+          <Image src="/akaike-logo.svg" alt="Logo" width={150} height={150} />
+        </Link>
       </div>
       <nav className="space-y-4 px-4">
         <Link href="/self-evaluation">
