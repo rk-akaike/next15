@@ -7,11 +7,10 @@ const SettingsPage = async () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">User Settings</h1>
+      <h1 className="text-2xl font-bold mb-4">User Details</h1>
 
       {user ? (
         <div className="bg-white p-4 rounded shadow">
-          <h2 className="text-xl font-semibold mb-2">User Details</h2>
           <p>
             <strong>Name:</strong> {user.name}
           </p>

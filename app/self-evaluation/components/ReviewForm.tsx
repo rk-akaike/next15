@@ -69,12 +69,15 @@ export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
       style={{ overflow: "hidden" }}
     >
       <div
-        className="bg-white w-full max-w-4xl p-6 rounded-lg shadow-lg overflow-y-auto "
-        style={{ maxHeight: "90vh" }} // Ensure the modal content fits within the viewport
+        className="bg-white w-full max-w-4xl p-6 rounded-lg shadow-lg overflow-y-auto"
+        style={{ maxHeight: "90vh" }}
       >
+        <h2 className="text-2xl font-bold mb-4 text-center">
+          Self Evaluation Form
+        </h2>
         <form
           onSubmit={handleSubmit}
-          className="space-y-4 max-h-full overflow-auto "
+          className="space-y-4 max-h-full overflow-auto"
         >
           <div>
             <label
