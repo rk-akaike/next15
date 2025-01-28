@@ -27,7 +27,7 @@ export default function TeamEvaluationForm({
     setError(null);
 
     const formData = new FormData(e.currentTarget);
-    const evaluation = {
+    const evaluation: Review = {
       type: "Manager",
       achievements: formData.get("achievements") as string,
       challenges: formData.get("challenges") as string,
@@ -36,7 +36,9 @@ export default function TeamEvaluationForm({
       comments: formData.get("comments") as string,
       discussion_date: formData.get("discussion_date") as string,
       rating: formData.get("rating") as string,
-      assessee: selectedUser,
+      assessee: {
+        name: selectedUser,
+      },
     };
 
     try {

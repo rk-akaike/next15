@@ -13,19 +13,19 @@ export interface Review {
 }
 
 interface Assessee {
-  employee_id: string;
-  keka_id: string;
-  email: string;
-  name: string;
-  profile_pic: string;
-  managers: string[];
+  employee_id?: string;
+  keka_id?: string;
+  email?: string;
+  name?: string;
+  profile_pic?: string;
+  managers?: string[];
 }
 
 interface Assessor {
-  employee_id: string;
-  keka_id: string;
-  email: string;
-  name: string;
-  profile_pic: string;
-  managers: string[];
+  employee_id?: string;
+  keka_id?: string;
+  email?: string;
+  name?: string;
+  profile_pic?: string;
+  managers?: string[];
 }
