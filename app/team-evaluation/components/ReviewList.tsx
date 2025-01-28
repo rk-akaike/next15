@@ -34,7 +34,7 @@ export default function ReviewList({
     setCurrentPage(1); // Reset page count
 
     // Pass the selected value directly to loadMoreReviews
-    loadMoreReviews(1, true, selected);
+    loadMoreReviews(0, true, selected);
   };
 
   const loadMoreReviews = async (
@@ -49,7 +49,7 @@ export default function ReviewList({
     try {
       const token = await fetchAccessToken();
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?page=${page}&limit=${REVIEWS_PER_PAGE}&reportee_email=${employeeEmail}`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?offset=${page}&limit=${REVIEWS_PER_PAGE}&reportee_email=${employeeEmail}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export default function ReviewList({
         setReviews((prev) => [...prev, ...newReviews]); // Append new reviews
       }
 
-      setHasMore(page * REVIEWS_PER_PAGE < count); // Determine if more reviews can be loaded
+      setHasMore(reviews.length <= count); // Determine if more reviews can be loaded
       setCurrentPage(page); // Update the current page
     } catch (err) {
       const errorMessage =
@@ -85,13 +85,13 @@ export default function ReviewList({
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
 
     if (scrollTop + clientHeight >= scrollHeight - 10 && hasMore && !loading) {
-      loadMoreReviews(currentPage + 1); // Load the next page
+      loadMoreReviews(currentPage + 4); // Load the next page
     }
   };
 
   useEffect(() => {
     if (selectedEmployee) {
-      loadMoreReviews(1, true); // Initial fetch or on employee change
+      loadMoreReviews(0, true); // Initial fetch or on employee change
     }
   }, [selectedEmployee]);
 

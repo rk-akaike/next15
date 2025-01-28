@@ -27,7 +27,7 @@ export default function ReviewList({
     try {
       const token = await fetchAccessToken();
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?page=${page}&limit=${REVIEWS_PER_PAGE}`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?offset=${page}&limit=${REVIEWS_PER_PAGE}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function ReviewList({
       }
 
       // Check if there are more reviews to load
-      if (page * REVIEWS_PER_PAGE >= count) {
+      if (reviews.length >= count) {
         setHasMore(false); // No more data to fetch
       } else {
         setHasMore(true);
@@ -67,7 +67,7 @@ export default function ReviewList({
   };
 
   useEffect(() => {
-    loadMoreReviews(1); // Initial fetch
+    loadMoreReviews(0); // Initial fetch
   }, []);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
@@ -75,7 +75,7 @@ export default function ReviewList({
 
     // Trigger load more when near the bottom
     if (scrollTop + clientHeight >= scrollHeight - 10 && hasMore && !loading) {
-      loadMoreReviews(currentPage + 1); // Load the next page
+      loadMoreReviews(currentPage + 4); // Load the next page
     }
   };
 
