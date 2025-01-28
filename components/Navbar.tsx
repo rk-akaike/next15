@@ -11,11 +11,18 @@ export default function Navbar() {
     window.location.href = "/api/auth/logout?returnTo=/";
   };
 
+  const getGreeting = () => {
+    const currentHour = new Date().getHours();
+    if (currentHour < 12) return "Good Morning";
+    if (currentHour < 18) return "Good Afternoon";
+    return "Good Evening";
+  };
+
   return (
     <nav className="bg-white shadow-sm py-4 px-6 flex items-center justify-between border-b border-gray-200 border  h-fit">
       {/* Left Section */}
       <div className="text-lg font-medium text-gray-800">
-        Good Morning, {user?.name || "Guest"}
+        {getGreeting()}, {user?.name || "Guest"}
       </div>
 
       {/* Right Section */}
