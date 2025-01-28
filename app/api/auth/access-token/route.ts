@@ -1,8 +1,13 @@
 import { getAccessToken } from "@auth0/nextjs-auth0";
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers"; // Import cookies properly
 
 export async function GET() {
   try {
+    // ✅ Get the cookies correctly without awaiting it
+    const cookieStore = cookies();
+
+    // Fetch the access token
     const accessToken = await getAccessToken();
 
     if (!accessToken?.accessToken) {
@@ -21,7 +26,7 @@ export async function GET() {
         { status: 500 }
       );
     } else {
-      console.error("Unexpected error:", error);
+      console.error("Unexpected error", error);
       return NextResponse.json(
         { error: "Unexpected error occurred", details: String(error) },
         { status: 500 }

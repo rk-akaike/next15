@@ -154,7 +154,9 @@ export default function ReviewList({
             className={`rounded-md mb-6 p-6 shadow-sm bg-gradient-to-r from-blue-100 to-blue-50`}
           >
             <div className="flex justify-between items-center mb-4">
-              <h4 className="text-lg font-semibold text-gray-800">Reviewer</h4>
+              <h4 className="text-lg font-semibold text-gray-800">
+                {review?.assessor?.name}
+              </h4>
               <p className="text-sm text-gray-500">
                 Discussion Date: {review.discussion_date}
               </p>
