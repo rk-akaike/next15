@@ -1,12 +1,8 @@
 import { getAccessToken } from "@auth0/nextjs-auth0";
 import { NextResponse } from "next/server";
-import { cookies } from "next/headers"; // Import cookies properly
 
 export async function GET() {
   try {
-    // ✅ Get the cookies correctly without awaiting it
-    const cookieStore = cookies();
-
     // Fetch the access token
     const accessToken = await getAccessToken();
 
