@@ -2,9 +2,15 @@
 
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
-import { HiSearch } from "react-icons/hi";
+import { HiSearch, HiMenu } from "react-icons/hi";
 
-export default function Navbar() {
+export default function Navbar({
+  toggleSidebar,
+  collapsed,
+}: {
+  toggleSidebar: () => void;
+  collapsed: boolean;
+}) {
   const { user } = useUser();
 
   const handleLogout = async () => {
@@ -19,10 +25,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-sm py-4 px-6 flex items-center justify-between border-b border-gray-200 border  h-fit">
+    <nav className="bg-white shadow-sm py-4 px-6 flex items-center justify-between border-b border-gray-200 h-fit">
       {/* Left Section */}
-      <div className="text-lg font-medium text-gray-800">
-        {getGreeting()}, {user?.name || "Guest"}
+      <div className="flex items-center space-x-4">
+        <button
+          onClick={toggleSidebar}
+          className={`focus:outline-none ${collapsed ? "" : "hidden"}`}
+        >
+          <HiMenu className="h-6 w-6 text-gray-700" />
+        </button>
+        <div className="text-lg font-medium text-gray-800">
+          {getGreeting()}, {user?.name || "Guest"}
+        </div>
       </div>
 
       {/* Right Section */}
