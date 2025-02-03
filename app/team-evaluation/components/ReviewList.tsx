@@ -177,6 +177,7 @@ export default function ReviewList({
                     "goals",
                     "skills",
                     "comments",
+                    "rating",
                   ] as const
                 ).map((field) => (
                   <div key={field}>
