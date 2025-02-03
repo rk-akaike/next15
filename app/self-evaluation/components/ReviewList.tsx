@@ -146,20 +146,25 @@ const ReviewCard = ({ review }: { review: Review }) => {
         </p>
       </div>
       <div className="space-y-4">
-        {["achievements", "challenges", "goals", "skills", "comments"].map(
-          (field) => (
-            <div key={field}>
-              <h5 className="text-sm font-semibold text-gray-600">
-                {field.charAt(0).toUpperCase() + field.slice(1)}
-              </h5>
-              <p className="text-sm text-gray-800">
-                {typeof review[field as keyof Review] === "object"
-                  ? JSON.stringify(review[field as keyof Review])
-                  : String(review[field as keyof Review] || "N/A")}
-              </p>
-            </div>
-          )
-        )}
+        {[
+          "achievements",
+          "challenges",
+          "goals",
+          "skills",
+          "comments",
+          "rating",
+        ].map((field) => (
+          <div key={field}>
+            <h5 className="text-sm font-semibold text-gray-600">
+              {field.charAt(0).toUpperCase() + field.slice(1)}
+            </h5>
+            <p className="text-sm text-gray-800">
+              {typeof review[field as keyof Review] === "object"
+                ? JSON.stringify(review[field as keyof Review])
+                : String(review[field as keyof Review] || "N/A")}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

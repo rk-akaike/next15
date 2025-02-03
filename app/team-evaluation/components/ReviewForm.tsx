@@ -125,8 +125,9 @@ export default function TeamEvaluationForm({
               id="discussion_date"
               name="discussion_date"
               type="date"
-              className="mt-1 block w-full p-2 border rounded-md"
+              className="mt-1 block w-full p-2 border rounded-md cursor-pointer"
               required
+              onClick={(e) => e.currentTarget.showPicker()}
             />
           </div>
           <div>
