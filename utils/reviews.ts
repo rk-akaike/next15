@@ -1,9 +1,8 @@
 import { REVIEWS_PER_PAGE } from "@/constants";
-import { getAccessToken } from "@auth0/nextjs-auth0";
 
 export const fetchReviews = async (offset: number) => {
   try {
-    const token = await getAccessToken();
+    const token = "";
     console.log("🚀 ~ fetchReviews ~ token:", token);
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?offset=${offset}&limit=${REVIEWS_PER_PAGE}`,

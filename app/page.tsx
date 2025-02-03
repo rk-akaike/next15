@@ -1,6 +1,6 @@
 "use client";
 
-import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
+import withAuthGuard from "@/hooks/withAuthGuard";
 import Link from "next/link";
 
 const Dashboard = () => {
@@ -43,4 +43,4 @@ const Dashboard = () => {
   );
 };
 
-export default withPageAuthRequired(Dashboard);
+export default withAuthGuard(Dashboard);

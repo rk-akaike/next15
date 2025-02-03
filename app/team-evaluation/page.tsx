@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import Modal from "@/components/Modal";
 import ReviewForm from "./components/ReviewForm";
 import ReviewList from "./components/ReviewList";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
-import { fetchAccessToken } from "@/utils/auth";
+
 import { Review } from "@/types/review";
+import { useAuth } from "@clerk/nextjs";
+import withAuthGuard from "@/hooks/withAuthGuard";
 
 const ManagerEvaluation = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,6 +15,7 @@ const ManagerEvaluation = () => {
   const [selectedEmployee, setSelectedEmployee] = useState<string>("");
   const [isLoadingEmployees, setIsLoadingEmployees] = useState<boolean>(true);
   const [employees, setEmployees] = useState<string[]>([]);
+  const { getToken } = useAuth();
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -21,7 +23,7 @@ const ManagerEvaluation = () => {
   const getEmployees = async () => {
     setIsLoadingEmployees(true);
     try {
-      const token = await fetchAccessToken();
+      const token = await getToken({ template: "custom-token" });
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/reportees`,
         {
@@ -108,4 +110,4 @@ const ManagerEvaluation = () => {
   );
 };
 
-export default withPageAuthRequired(ManagerEvaluation);
+export default withAuthGuard(ManagerEvaluation);

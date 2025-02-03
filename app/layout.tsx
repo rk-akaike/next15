@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { ClerkProvider } from "@clerk/nextjs";
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
@@ -36,12 +36,13 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ToastContainer />
-        <UserProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ToastContainer />
+
           <div className="flex">
             <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} />
             <div
@@ -53,8 +54,8 @@ export default function RootLayout({
               <main className="p-6">{children}</main>
             </div>
           </div>
-        </UserProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -2,7 +2,7 @@
 
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Review } from "@/types/review";
-import { fetchAccessToken } from "@/utils/auth";
+import { useAuth } from "@clerk/nextjs";
 
 const REVIEWS_PER_PAGE = 4;
 
@@ -25,6 +25,7 @@ export default function ReviewList({
   const [hasMore, setHasMore] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const { getToken } = useAuth();
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selected = e.target.value; // Get the selected dropdown value
@@ -47,7 +48,7 @@ export default function ReviewList({
     setError(null);
 
     try {
-      const token = await fetchAccessToken();
+      const token = await getToken({ template: "custom-token" });
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback?offset=${page}&limit=${REVIEWS_PER_PAGE}&reportee_email=${employeeEmail}`,
         {

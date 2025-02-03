@@ -4,8 +4,8 @@ import { useState } from "react";
 import Modal from "@/components/Modal";
 import ReviewForm from "./components/ReviewForm";
 import ReviewList from "./components/ReviewList";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import { Review } from "@/types/review";
+import withAuthGuard from "@/hooks/withAuthGuard";
 
 const SelfEvaluation = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,4 +54,4 @@ const SelfEvaluation = () => {
   );
 };
 
-export default withPageAuthRequired(SelfEvaluation);
+export default withAuthGuard(SelfEvaluation);

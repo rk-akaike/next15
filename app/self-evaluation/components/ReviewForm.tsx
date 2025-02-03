@@ -1,7 +1,8 @@
 "use client";
 
 import { Review } from "@/types/review";
-import { fetchAccessToken } from "@/utils/auth";
+import { useAuth } from "@clerk/nextjs";
+
 import { Dispatch, SetStateAction, useState } from "react";
 import { toast } from "react-toastify";
 
@@ -13,6 +14,7 @@ interface ReviewFormProps {
 export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { getToken } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,7 +33,7 @@ export default function ReviewForm({ onClose, setReviews }: ReviewFormProps) {
     };
 
     try {
-      const token = await fetchAccessToken();
+      const token = await getToken({ template: "custom-token" });
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback`,
         {

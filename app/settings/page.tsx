@@ -1,44 +1,87 @@
-import { getSession } from "@auth0/nextjs-auth0";
+"use client";
+
+import withAuthGuard from "@/hooks/withAuthGuard";
+import { useUser, SignOutButton } from "@clerk/nextjs";
 import Image from "next/image";
 
-const SettingsPage = async () => {
-  const session = await getSession();
-  const user = session?.user;
+const SettingsPage = () => {
+  const { isSignedIn, user } = useUser();
+
+  if (!isSignedIn || !user) {
+    return (
+      <p className="text-red-500 text-center mt-10">
+        Unable to fetch user details.
+      </p>
+    );
+  }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">User Details</h1>
+    <div className=" mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h1 className="text-2xl font-bold mb-4">User Profile</h1>
 
-      {user ? (
-        <div className="bg-white p-4 rounded shadow">
+      <div className="flex flex-col  space-y-4">
+        {/* Profile Picture */}
+        {user.imageUrl && (
+          <Image
+            src={user.imageUrl}
+            alt="User profile"
+            width={100}
+            height={100}
+            className="rounded-full border-8 border-gray-300 shadow"
+            priority
+          />
+        )}
+
+        {/* User Info */}
+        <div className="w-full text-left space-y-2">
           <p>
-            <strong>Name:</strong> {user.name}
+            <strong>Name:</strong> {user.fullName || "N/A"}
           </p>
           <p>
-            <strong>Email:</strong> {user.email}
+            <strong>Email:</strong>{" "}
+            {user.primaryEmailAddress?.emailAddress || "N/A"}
           </p>
           <p>
-            <strong>Nickname:</strong> {user.nickname}
+            <strong>Username:</strong> {user.username || "N/A"}
           </p>
           <p>
-            <strong>Picture:</strong>
-            <Image
-              src={user.picture}
-              alt="User profile"
-              width={64}
-              height={64}
-              className="rounded-full mt-2"
-            />
+            <strong>User ID:</strong> {user.id}
           </p>
           <p>
-            <strong>Sub:</strong> {user.sub}
+            <strong>Created At:</strong>{" "}
+            {user.createdAt
+              ? new Date(user.createdAt).toLocaleDateString()
+              : "N/A"}
+          </p>
+          <p>
+            <strong>Last Sign-In:</strong>{" "}
+            {new Date(user.lastSignInAt || "").toLocaleString()}
+          </p>
+          <p
+            className={
+              user.primaryEmailAddress?.verification?.status === "verified"
+                ? "text-green-600"
+                : "text-red-600"
+            }
+          >
+            <strong>Email Verified:</strong>{" "}
+            {user.primaryEmailAddress?.verification?.status === "verified"
+              ? "Yes ✅"
+              : "No ❌"}
           </p>
         </div>
-      ) : (
-        <p className="text-red-500">Unable to fetch user details.</p>
-      )}
+
+        {/* Logout Button */}
+        <SignOutButton>
+          <div className="flex justify-center items-center">
+            <button className="px-4 py-2 bg-red-500 text-white rounded shadow hover:bg-red-600">
+              Sign Out
+            </button>
+          </div>
+        </SignOutButton>
+      </div>
     </div>
   );
 };
 
-export default SettingsPage;
+export default withAuthGuard(SettingsPage);

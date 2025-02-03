@@ -1,7 +1,8 @@
 "use client";
 
 import { Review } from "@/types/review";
-import { fetchAccessToken } from "@/utils/auth";
+import { useAuth } from "@clerk/nextjs";
+
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -20,6 +21,7 @@ export default function TeamEvaluationForm({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedUser, setSelectedUser] = useState("");
+  const { getToken } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,7 +44,7 @@ export default function TeamEvaluationForm({
     };
 
     try {
-      const token = await fetchAccessToken();
+      const token = await getToken({ template: "custom-token" });
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/feedback`,
         {
