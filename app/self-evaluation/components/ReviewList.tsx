@@ -98,7 +98,7 @@ export default function ReviewList({
   }, []);
 
   return (
-    <div className="flex flex-col h-[calc(100vh_-_14rem)] w-full">
+    <div className="flex flex-col h-[calc(100vh-14rem)] w-full">
       <div
         className="flex-1 overflow-y-auto p-4"
         onScroll={(e) => {
